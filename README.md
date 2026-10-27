@@ -20,19 +20,7 @@ Proyek dibangun menggunakan:
    - **Proteksi WebSocket Handshake:** Handshake `/ws` memverifikasi sesi cookie `dc_session` secara server-authoritative, mencegah pemalsuan identitas (*player_id spoofing*) dan memvalidasi `Origin`.
    - **Rate Limiting:** Sliding-window rate limiter per IP membatasi percobaan brute-force pada endpoint autentikasi.
 
-2. **Bank Kata Terpusat & Petunjuk Bertahap (Centralized Word Bank):**
-   - Tersimpan di tabel `words` dan `word_clues` PostgreSQL dengan **110 kata bahasa Indonesia** dan petunjuk relevan dalam 10 kategori:
-     1. Hewan (Kucing, Gajah, Harimau, Jerapah, dll.)
-     2. Makanan & Minuman (Nasi Goreng, Rendang, Sate Ayam, Bakso, dll.)
-     3. Benda Sehari-hari (Sepeda, Jam Dinding, Kacamata, Termos, dll.)
-     4. Profesi (Dokter, Guru, Polisi, Koki, Pilot, dll.)
-     5. Tempat (Sekolah, Rumah Sakit, Bandara, Stasiun, dll.)
-     6. Transportasi (Pesawat Terbang, Kapal Laut, Kereta Api, dll.)
-     7. Alam & Cuaca (Matahari, Pelangi, Petir, Gunung Berapi, dll.)
-     8. Olahraga (Sepak Bola, Bulu Tangkis, Bola Basket, Renang, dll.)
-     9. Hiburan & Seni (Gitar, Piano, Lukisan, Kamera, dll.)
-     10. Teknologi (Komputer, Ponsel Pintar, Robot, Drone, Roket, dll.)
-   - Kata rahasia **hanya dikirim ke penggambar**, penebak hanya menerima pola garis bawah (*masked*).
+2. - Kata rahasia **hanya dikirim ke penggambar**, penebak hanya menerima pola garis bawah (*masked*).
    - Petunjuk bertahap (*clue*) otomatis dibongkar dan disiarkan di chat pada sisa waktu **50%** (Petunjuk 1) dan **25%** (Petunjuk 2).
 
 3. **7 Chaos Items Lengkap (Interaktif dengan Koin):**
